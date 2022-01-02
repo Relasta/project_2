@@ -22,9 +22,8 @@ a {
     font-size: 48px;
     line-height: 59px;
     color: #333333;;
-    margin-top: 101px;
+    margin-top: 100px;
     margin-bottom: 0;
-    margin-left: 2px;
 }
 
 .texts {
@@ -208,6 +207,7 @@ a {
 .slider__photos_pic {
     position: absolute;
     z-index: -1;
+    max-width: 100%;
 }
 
 .slider__text-and-button {
@@ -303,6 +303,7 @@ a {
     display: flex;
     flex-direction: row;
     margin-top: 50px;
+    
 }
 
 .tile__right-block {
@@ -539,7 +540,7 @@ a {
     color: #333;
     border: 1px solid #333333;
     box-sizing: border-box;
-    padding: 20px 36px 19px 38px;
+    padding: 19px 38px;
     background-color: #fff;
     margin-left: 32px;
     cursor: pointer;
@@ -584,10 +585,6 @@ a {
     transition: background-color .1s ease-in-out, color .1s ease-in-out;;
 }
 
-.headlines-2{
-    margin: 96px auto 0 0;
-}
-
 .how-we-work__left-block_headline {
     font-weight: bold;
     font-size: 24px;
@@ -605,11 +602,15 @@ a {
     margin-top: 8px;
 }
 
+.how-we-work__right-block {
+    max-height: 460px;
+    margin-top: 10px;
+}
+
 .how-we-work__right-block_img {
     width: 870px;
     height: 460px;
     margin-left: 142px;
-    margin-top: 10px;
 }
 
 /* questions */
@@ -731,7 +732,7 @@ a {
 
 .footer {
     background-color:#222222;
-    margin-top: 102px;
+    margin-top: 100px;
 }
 
 .footer-content {
@@ -965,7 +966,6 @@ a {
     color: #CACACA;
     margin-bottom: 0;
     margin-top: 50px;
-    margin-left: 1px;
 }
 
 .footer-content__mid-block_text {
@@ -997,10 +997,12 @@ a {
 
     .container {
         margin: 0 5%;
+    
     }
+    
 }
 
-@media (min-width:769px) and (max-width:1024px) {
+@media (max-width:1024px) and (min-width:769px) {
     
     .container {
         margin: 0 50px;
@@ -1052,6 +1054,10 @@ a {
         height: 670px;
     }
 
+    .slider__photos_pic {
+        max-width: 100%;
+    }
+
     .slider__headline {
         font-style: normal;
         font-weight: 800;
@@ -1085,10 +1091,11 @@ a {
 
     .tile__main {
         flex-direction: column;
+        
     }
 
     .tile__right-block {
-        margin: 29px 0 0 0;
+        margin: 0;
     }
 
     .headlines {
@@ -1102,13 +1109,14 @@ a {
 
     .tile__left-block_img {
         max-width: 100%;
-        height: 640px;
-        margin-top: 12px;
-        
     }
 
     .tile__left-block_info {
         top: 456px;
+    }
+
+    .tile__right-block_upper-and-lower {
+        margin-top: 32px;
     }
 
     .tile__right-block_upper-and-lower_center {
@@ -1129,7 +1137,6 @@ a {
         width: 437px;
         height: 689px;
         margin-left: 50px;
-        margin-top: 15px;
     }
     .how-we-work__left-block_orange-button:focus, 
     .how-we-work__left-block_orange-button:active,
@@ -1176,10 +1183,14 @@ a {
     
 }
 
-@media (min-width:320px) and (max-width: 768px) {
+@media (max-width: 768px) and (min-width:320px) {
 
     .container {
         margin: 0 50px;
+    }
+
+    .headlines {
+        margin-top: 80px;
     }
 /* header */
 
@@ -1218,23 +1229,66 @@ a {
     }
 
     .header-content {
-        height: 100%;
+        height: 69px;
         padding-top: 0;
     }
 
     /* Slider */
-
-    /* .slider__photos {
-        background-image: url(/img/jpeg/hero-668w.jpg);
-        width: 100%;
-        background-repeat:no-repeat;
-        background-position: center;
-        height: 668px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }  */
     
+    .slider__text-and-button {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .slider__headline {
+        font-size: 50px;
+        line-height: 61px;
+    }
+    
+    .slider__text {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .slider__button {
+        margin-top: 60px;
+    }
+
+    .slider__picture {
+        height: 40px;
+    }
+
+    /* Tile */
+    
+    .tile__main {
+        flex-direction: column;
+    }
+
+    .tile__right-block_upper-and-lower {
+        height: 235px;
+    }
+
+    .tile__right-block_upper-and-lower-img {
+        height: 99px;
+    }
+    .tile__right-block {
+        margin: 0;
+    }
+
+    /* About-us */
+
+    
+
+    /* HWW */
+    .how-we-work__main-block {
+        flex-direction: column-reverse;
+    }
+
+    .how-we-work__right-block_img {
+        margin: 0;
+        width: 100%;
+        height: 40%;
+    }
     /* footer */
 
     .footer-content__mid-block {
@@ -1252,5 +1306,9 @@ a {
     .footer-content__mid-block_button:hover,
     .footer-content__mid-block_button {
         padding: 19px 38px;
+    }
+
+    .right-block {
+        display: none;
     }
 }

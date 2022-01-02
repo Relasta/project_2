@@ -57,6 +57,12 @@
         <section class="slider">
             <div class="container">
                 <div class="slider__photos">
+                    <picture>
+                        <source media="(max-width: 1024px) and (min-width: 769px)" srcset="/img/jpeg/hero-924w.jpg">
+                        <source media="(max-width: 768px) and (min-width: 321px)" srcset="/img/jpeg/hero-668w.jpg">
+                        <source media="(max-width: 320px)" srcset="/img/jpeg/hero-290w.jpg">
+                        <img src="/img/jpeg/hero1.jpg" alt="Фоновое изображение" class="slider__photos_pic">
+                    </picture>
                     <div class="slider__text-and-button">    
                         <h1 class="slider__headline">Проектные решения любой сложности</h1>
                         <p class="slider__text">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов</p>

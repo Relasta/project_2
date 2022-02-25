@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project2</title>
+    <title>Евклид</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
@@ -42,11 +45,13 @@
                         </li>
                     </ul>
                     <ul class="header-main__bar-2">
-                        <!-- <li class="header-main__bar-2_item"><input type="text" class="">-->
-                        <button class="header-main__search-button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- <li class="header-main__bar-2_item"><input type="text" class="">
+                        <button class="header-main__search-button">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6062 17.3762)" fill="#333333"/>
                             <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="#333333" stroke-width="2"/>
-                                </svg></button><!--</li> -->
+                            </svg>
+                        </button></li> -->
                     </ul>
                 </div>
             </section>
@@ -55,14 +60,27 @@
     <div class="container"> 
         <main class="main-content">
             <section class="hero">
-                <div class="slider">
+                <!--<div class="slider">
                     <div class="slider__photos">
-                        <div class="slider__text-and-button">    
-                            <h1 class="slider__headline">Проектные решения любой сложности</h1>
-                            <p class="slider__text">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов</p>
-                            <button class="slider__button">Заказать расчёт</button>
-                        </div>
                     </div>
+                </div> -->
+
+                 <!-- контейнер слайдера -->
+                <div class="swiper-container">
+                        <!-- враппер -->
+                    <div class="slider__text-and-button">    
+                        <h1 class="slider__headline">Проектные решения любой сложности</h1>
+                        <p class="slider__text">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов</p>
+                        <button class="slider__button">Заказать расчёт</button>
+                    </div>
+                    <div class="swiper-wrapper">
+                     <!-- слайды -->
+                        <div class="swiper-slide slide1"></div>
+                        <div class="swiper-slide slide2"></div>
+                        <div class="swiper-slide slide3"></div>
+                    </div>
+                        <!-- кнопки пагинации -->
+                    <div class="swiper-pagination"></div>
                 </div>
             </section>
 
@@ -105,26 +123,53 @@
             </section>
 
             <section class="how-we-work">
-                <h3 class="headlines headlines-2">Как мы работаем</h3>
+                <h3 class="headlines">Как мы работаем</h3>
                 <ul class="how-we-work__step-list">
-                    <li class="how-we-work__step-list_item"><button class="how-we-work__four-step">1 шаг</button></li>
-                    <li class="how-we-work__step-list_item"><button class="how-we-work__four-step">2 шаг</button></li>
-                    <li class="how-we-work__step-list_item"><button class="how-we-work__four-step">3 шаг</button></li>
-                    <li class="how-we-work__step-list_item"><button class="how-we-work__four-step">4 шаг</button></li>
+                    <li class="how-we-work__step-list_item tabs-nav__item"><button class="how-we-work__four-step tabs-nav__btn tabs-nab__btn--active" data-path="one">1 шаг</button></li>
+                    <li class="how-we-work__step-list_item tabs-nav__item"><button class="how-we-work__four-step tabs-nav__btn" data-path="two">2 шаг</button></li>
+                    <li class="how-we-work__step-list_item tabs-nav__item"><button class="how-we-work__four-step tabs-nav__btn" data-path="three">3 шаг</button></li>
+                    <li class="how-we-work__step-list_item tabs-nav__item"><button class="how-we-work__four-step tabs-nav__btn" data-path="four">4 шаг</button></li>
                 </ul>
-                <div class="how-we-work__main-block">
-                    <div class="how-we-work__left-block">
-                        <h4 class="how-we-work__left-block_headline">Проводим консультацию</h4>
-                        <p class="how-we-work__left-block_text">Влечет за собой процесс внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований. Кстати, стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, призваны к ответу.</p>
-                        <button class="how-we-work__left-block_orange-button">Подробнее</button><button class="how-we-work__left-block_white-button">Договор</button>
+                <div class="tabs-content how-we-work__main-block">
+                    <!-- элементы табов -->
+                    <div class="tabs-item tabs-item--active" data-target="one">
+                        <div class="how-we-work__left-block">
+                            <h4 class="how-we-work__left-block_headline">Проводим консультацию</h4>
+                            <p class="how-we-work__left-block_text">Влечет за собой процесс внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований. Кстати, стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, призваны к ответу.</p>
+                            <button class="how-we-work__left-block_orange-button">Подробнее</button><button class="how-we-work__left-block_white-button">Договор</button>
+                        </div>
+                        <div class="how-we-work__right-block hww_1"></div>
                     </div>
-                    <div class="how-we-work__right-block"></div>
+                    <div class="tabs-item" data-target="two">
+                        <div class="how-we-work__left-block">
+                            <h4 class="how-we-work__left-block_headline">Составляем смету</h4>
+                            <p class="how-we-work__left-block_text">Внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований.</p>
+                            <button class="how-we-work__left-block_orange-button">Подробнее</button><button class="how-we-work__left-block_white-button">Договор</button>
+                        </div>
+                        <div class="how-we-work__right-block hww_2"></div>
+                    </div>
+                    <div class="tabs-item" data-target="three">
+                        <div class="how-we-work__left-block">
+                            <h4 class="how-we-work__left-block_headline">Привлекаем подрядчиков</h4>
+                            <p class="how-we-work__left-block_text">Идейные соображения высшего порядка, а также новая модель организационной деятельности требует анализа прогресса профессионального сообщества. Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнить важные задания по разработке прогресса профессионального сообщества.</p>
+                            <button class="how-we-work__left-block_orange-button">Подробнее</button><button class="how-we-work__left-block_white-button">Договор</button>
+                        </div>
+                        <div class="how-we-work__right-block hww_3"></div>
+                    </div>
+                    <div class="tabs-item" data-target="four">
+                        <div class="how-we-work__left-block">
+                            <h4 class="how-we-work__left-block_headline">Инспектируем все этапы работ</h4>
+                            <p class="how-we-work__left-block_text">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет.</p>
+                            <button class="how-we-work__left-block_orange-button">Подробнее</button><button class="how-we-work__left-block_white-button">Договор</button>
+                        </div>
+                        <div class="how-we-work__right-block hww_4"></div>
+                    </div>
                 </div>
             </section>
 
             <section class="questions">
                 <h3 class="headlines headlines-2">Часто задаваемые вопросы</h3>
-                <ul class="questions__list">
+                <ul class="questions__list accordion">
                     <li class="questions__list_item">
                         <div class="questions__list_item_open-block">
                             <label for="plust1">
@@ -133,6 +178,7 @@
                             <input type="checkbox" class="questions__list_item_plust" id="plust1">
                             <div class="questions__list_item_fake-plust"></div>
                         </div>
+                        <p class="questions__answers">Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас к новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы. Но высококачественный прототип будущего проекта является качественно новой ступенью первоочередных требований. А ещё некоторые особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. И нет сомнений, что явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь, должны быть указаны как претенденты на роль ключевых факторов. Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к ответу. Явные признаки победы институционализации набирают популярность среди определенных слоев населения, а значит, должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые выводы, а также многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть представлены в исключительно положительном свете. </p>
                     </li>
                     <li class="questions__list_item">
                         <div class="questions__list_item_open-block">
@@ -142,6 +188,7 @@
                             <input type="checkbox" class="questions__list_item_plust" id="plust2">
                             <div class="questions__list_item_fake-plust"></div>
                         </div>
+                        <p class="questions__answers">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores iste ratione, unde, facere veritatis eum iure facilis et alias omnis vitae. Sapiente omnis quibusdam dolorum amet error nobis aut porro.</p>
                     </li>
                     <li class="questions__list_item">
                         <div class="questions__list_item_open-block">
@@ -151,6 +198,7 @@
                             <input type="checkbox" class="questions__list_item_plust" id="plust3">
                             <div class="questions__list_item_fake-plust"></div>
                         </div>
+                        <p class="questions__answers">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis aut, optio quam deserunt voluptate doloribus dicta est modi eligendi reprehenderit, maiores dolore maxime delectus facere eaque cumque asperiores ipsum nemo?</p>
                     </li>
                     <li class="questions__list_item">
                         <div class="questions__list_item_open-block">
@@ -160,6 +208,7 @@
                             <input type="checkbox" class="questions__list_item_plust" id="plust4">
                             <div class="questions__list_item_fake-plust"></div>
                         </div>
+                        <p class="questions__answers">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta sint dicta ducimus magni quidem incidunt tenetur necessitatibus hic nihil, inventore, dolorem iste eveniet eaque veritatis corporis quo facere accusamus reiciendis?</p>
                     </li>
                     <li class="questions__list_item">
                         <div class="questions__list_item_open-block">
@@ -169,6 +218,7 @@
                             <input type="checkbox" class="questions__list_item_plust" id="plust5">
                             <div class="questions__list_item_fake-plust"></div>
                         </div>
+                        <p class="questions__answers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, aliquam repudiandae vel tenetur quam alias saepe fuga nulla? Natus ut quas possimus amet, suscipit molestiae consequuntur expedita nesciunt laboriosam nemo?</p>
                     </li>
                 </ul>
             </section>
@@ -232,5 +282,10 @@
             </section>
         </div>    
     </footer>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>

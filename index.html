@@ -45,13 +45,22 @@
                         </li>
                     </ul>
                     <ul class="header-main__bar-2">
-                        <!-- <li class="header-main__bar-2_item"><input type="text" class="">
-                        <button class="header-main__search-button">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6062 17.3762)" fill="#333333"/>
-                            <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="#333333" stroke-width="2"/>
-                            </svg>
-                        </button></li> -->
+                        <li class="header-main__bar-2_item">
+                            <input type="text" class="search_window" placeholder="Что будем искать?">
+                            <button class="header-main__search-button">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6062 17.3762)" fill="#333333"/>
+                                    <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="#333333" stroke-width="2"/>
+                                </svg>
+                            </button>
+                            <button class="header__cross">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="8.95386" y="7.30435" width="11.6645" height="2.33291" transform="rotate(45 8.95386 7.30435)" fill="#999999"/>
+                                    <rect x="7.30432" y="15.5524" width="11.6645" height="2.33291" transform="rotate(-45 7.30432 15.5524)" fill="#999999"/>
+                                    <circle cx="12" cy="12" r="11" stroke="#999999" stroke-width="2"/>
+                                </svg>                                                              
+                            </button>
+                        </li>
                     </ul>
                 </div>
             </section>
@@ -60,11 +69,6 @@
     <div class="container"> 
         <main class="main-content">
             <section class="hero">
-                <!--<div class="slider">
-                    <div class="slider__photos">
-                    </div>
-                </div> -->
-
                  <!-- контейнер слайдера -->
                 <div class="swiper-container">
                         <!-- враппер -->
@@ -172,50 +176,35 @@
                 <ul class="questions__list accordion">
                     <li class="questions__list_item">
                         <div class="questions__list_item_open-block">
-                            <label for="plust1">
-                                <strong class="questions__list_item_headline">Из чего формируется конечная стоимость проекта?</strong>
-                            </label>
-                            <input type="checkbox" class="questions__list_item_plust" id="plust1">
+                            <strong class="questions__list_item_headline">Из чего формируется конечная стоимость проекта?</strong>
                             <div class="questions__list_item_fake-plust"></div>
                         </div>
                         <p class="questions__answers">Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас к новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы. Но высококачественный прототип будущего проекта является качественно новой ступенью первоочередных требований. А ещё некоторые особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. И нет сомнений, что явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь, должны быть указаны как претенденты на роль ключевых факторов. Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к ответу. Явные признаки победы институционализации набирают популярность среди определенных слоев населения, а значит, должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые выводы, а также многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть представлены в исключительно положительном свете. </p>
                     </li>
                     <li class="questions__list_item">
                         <div class="questions__list_item_open-block">
-                            <label for="plust2">
-                                <strong class="questions__list_item_headline">У меня есть свой проект. Сможем ли мы его доработать <span class="grey-stick">/</span> реализовать?</strong>
-                            </label>
-                            <input type="checkbox" class="questions__list_item_plust" id="plust2">
+                            <strong class="questions__list_item_headline">У меня есть свой проект. Сможем ли мы его доработать <span class="grey-stick">/</span> реализовать?</strong>
                             <div class="questions__list_item_fake-plust"></div>
                         </div>
                         <p class="questions__answers">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores iste ratione, unde, facere veritatis eum iure facilis et alias omnis vitae. Sapiente omnis quibusdam dolorum amet error nobis aut porro.</p>
                     </li>
                     <li class="questions__list_item">
                         <div class="questions__list_item_open-block">
-                            <label for="plust3">
-                                <strong class="questions__list_item_headline">Я выбираю между разными компаниями. В чём ваше отличие?</strong>
-                            </label>
-                            <input type="checkbox" class="questions__list_item_plust" id="plust3">
+                            <strong class="questions__list_item_headline">Я выбираю между разными компаниями. В чём ваше отличие?</strong>
                             <div class="questions__list_item_fake-plust"></div>
                         </div>
                         <p class="questions__answers">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis aut, optio quam deserunt voluptate doloribus dicta est modi eligendi reprehenderit, maiores dolore maxime delectus facere eaque cumque asperiores ipsum nemo?</p>
                     </li>
                     <li class="questions__list_item">
                         <div class="questions__list_item_open-block">
-                            <label for="plust4">
-                                <strong class="questions__list_item_headline">Могу ли я делегировать вам работу <span class="grey-stick">/</span> согласование с подрядчиком <span class="grey-stick">/</span> организацией? </strong>
-                            </label>
-                            <input type="checkbox" class="questions__list_item_plust" id="plust4">
+                            <strong class="questions__list_item_headline">Могу ли я делегировать вам работу <span class="grey-stick">/</span> согласование с подрядчиком <span class="grey-stick">/</span> организацией? </strong>
                             <div class="questions__list_item_fake-plust"></div>
                         </div>
                         <p class="questions__answers">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta sint dicta ducimus magni quidem incidunt tenetur necessitatibus hic nihil, inventore, dolorem iste eveniet eaque veritatis corporis quo facere accusamus reiciendis?</p>
                     </li>
                     <li class="questions__list_item">
                         <div class="questions__list_item_open-block">
-                            <label for="plust5">
-                                <strong class="questions__list_item_headline">Могу ли я вернуть деньги на каком-либо из этапов работ?</strong>
-                            </label>
-                            <input type="checkbox" class="questions__list_item_plust" id="plust5">
+                            <strong class="questions__list_item_headline">Могу ли я вернуть деньги на каком-либо из этапов работ?</strong>
                             <div class="questions__list_item_fake-plust"></div>
                         </div>
                         <p class="questions__answers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, aliquam repudiandae vel tenetur quam alias saepe fuga nulla? Natus ut quas possimus amet, suscipit molestiae consequuntur expedita nesciunt laboriosam nemo?</p>

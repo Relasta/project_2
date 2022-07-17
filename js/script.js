@@ -1,14 +1,38 @@
 // Search
 $('.header-main__search-button').click(function () {
-    $('.search_window').toggleClass('open_window', true);
-    $('.header-main__bar-2_item').toggleClass('header-main__bar-2_item_visible', true);
-    $('.header__cross').toggleClass('header__cross_visible', true);
+    if (!$('.burger-menu').hasClass('burger-menu_visible')) {
+        $('.header-main__bar-2_item').toggleClass('header-main__bar-2_item_slide-d', true);
+        $('.header-main__bar-2_item').toggleClass('header-main__bar-2_item_slide-u', false);
+        $('.shadow_search').fadeTo('fast', 0);
+    }
 });
 
 $('.header__cross').click(function () {
-    $('.search_window').toggleClass('open_window', false);
-    $('.header-main__bar-2_item').toggleClass('header-main__bar-2_item_visible', false);
-    $('.header__cross').toggleClass('header__cross_visible', false);
+    $('.header-main__bar-2_item').toggleClass('header-main__bar-2_item_slide-d', 'header-main__bar-2_item_slide-u');
+    $('.header-main__bar-2_item').toggleClass('header-main__bar-2_item_slide-u', true);
+    $('.shadow_search').fadeTo('fast', 1);
+});
+
+// Burger 
+
+$(document).ready(function() {
+    $('#burger').click(function() {
+        if (!$('.header-main__bar-2_item').hasClass('header-main__bar-2_item_slide-d')) {
+            if (!$('.burger-menu').hasClass('burger-menu_visible')) {
+                $('.burger-menu').removeClass('burger-menu_unvisible');
+                $('.burger-menu').addClass('burger-menu_visible');
+                $('.burger').toggleClass('burger-item_cross');
+            }
+            // if ($('.burger-menu').hasClass('burger-menu_unvisible')) {
+            //     $('.burger-menu').toggleClass('burger-menu_unvisible, burger-menu_visible');
+            // }
+            else {
+                $('.burger-menu').removeClass('burger-menu_visible');
+                $('.burger-menu').addClass('burger-menu_unvisible');
+                $('.burger').toggleClass('burger-item_cross');
+            }
+        }
+    });    
 });
 
 // Swiper
@@ -19,6 +43,7 @@ const swiper = new Swiper('.swiper-container', {
     // пагинация
     pagination: {
     el: '.swiper-pagination',
+    type: 'bullets',
     clickable: true
     },
     // навигация
@@ -51,3 +76,5 @@ $(".accordion").accordion({
     disables: true,
     collapsible: true
 } )
+
+$(".ui-accordion-header").attr({tabindex: 0}); 
